@@ -39,6 +39,8 @@ function calculateAverage() {
 
     var average = sum / count;
     if (isNaN(average) || count === 1){
+        // limit to 2 decimals
+        average = average.toFixed(2);
         document.getElementById('average').textContent = "Ingresa al menos dos números";
         document.getElementById('total').textContent = "";
         document.getElementById('count').textContent = "";
