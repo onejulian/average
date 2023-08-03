@@ -39,13 +39,14 @@ function calculateAverage() {
 
     var average = sum / count;
     if (isNaN(average) || count === 1){
-        // limit to 2 decimals
-        average = average.toFixed(2);
         document.getElementById('average').textContent = "Ingresa al menos dos números";
         document.getElementById('total').textContent = "";
         document.getElementById('count').textContent = "";
         return;
     } else {
+        if (average % 1 !== 0) {
+            average = average.toFixed(2);
+        }
         document.getElementById('average').textContent = "Promedio = " + average;
         document.getElementById('total').textContent = "Suma total: " + sum;
         document.getElementById('count').textContent = "Número de valores: " + count;
