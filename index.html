@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora de Promedio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-gray-100 flex items-center justify-center min-h-screen border">
+        <div class="w-1/2 p-4 mx-8">
+            <div class="h-32">
+                <p id="average" class="mt-3 text-center text-lg font-bold"></p>
+                <p id="total" class="mt-3 text-center text-lg font-bold"></p>
+                <p id="count" class="mt-3 text-center text-lg font-bold"></p>
+            </div>
+            <div class="flex justify-end">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+                    onclick="addInput()">Agregar otro número</button>
+            </div>
+        </div>
+        <div class="p-4 w-1/2 mx-8">
+            <div class="p-8 bg-white rounded shadow-md max-h-96 overflow-y-auto">
+                <div id="inputList" class="space-y-4">
+                    <div class="input-group">
+                        <input type="number" class="number-input form-input w-full p-4 border border-gray-300 rounded"
+                            placeholder="Ingrese un número">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
