@@ -49,9 +49,24 @@ function calculateAverage() {
         }
         document.getElementById('average').textContent = "Promedio = " + average;
         document.getElementById('total').textContent = "Suma total: " + sum;
-        document.getElementById('count').textContent = "Número de valores: " + count;
+        document.getElementById('count').textContent = "Cantidad de valores: " + count;
 
     }
+}
+
+function clearInputs() {
+    var inputs = document.getElementsByClassName('number-input');
+    for(var i = inputs.length - 1; i >= 0; i--) {
+        if (i !== 0) {
+            inputs[i].parentElement.remove();
+        }
+    }
+
+    inputs[0].value = "";
+
+    document.getElementById('average').textContent = "Ingresa al menos dos números";
+    document.getElementById('total').textContent = "";
+    document.getElementById('count').textContent = "";
 }
 
 calculateAverage();
